@@ -9,7 +9,7 @@ function Details() {
   const image_path = 'https://image.tmdb.org/t/p/w500'
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=pt-BR-US&page=1`)
     .then(response => response.json())
     .then(data => {
 
@@ -33,8 +33,8 @@ function Details() {
         <div className="details">
           <h1>{movie.title}</h1>
           <span>Sinopse: {movie.sinopse}</span>
-          <span className='release_date'>Release Date: {movie.releaseDate}</span>
-          <Link to="/"><button>Go Back</button></Link>
+          <span className='release_date'>LANÇAMENTO: {movie.releaseDate}</span>
+          <Link to="/"><button>Voltar</button></Link>
         </div>
       </div>
     </Container>

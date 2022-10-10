@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     //consumir a API...
 
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=pt-BR-US&page=1`)
     .then(response => response.json())
     .then(data => {
       setMovies(data.results)})
@@ -21,7 +21,7 @@ function Home() {
 
   return(
     <Container>
-    <h1>Movies</h1>
+    <h1>OS 20 FILMES DO MOMENTO</h1>
     <MovieList>
 
     {movies.map(movie => {
